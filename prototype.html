@@ -30,7 +30,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/2016/group20/img/favicon.ico">
     
 
-    
+    <!---->
 
     
 
@@ -55,7 +55,7 @@
 <!-- HEAD End -->
 
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="151" class="white">
+<body>
 
 <!-- Intro Start -->
 
@@ -70,19 +70,26 @@
                 <li><a href="https://github.com/orgs/ATOS-Time-Machine/" target="_blank">Github</a></li>
                 <li><a href="/2016/group20/background.html">Background</a></li>
                 <li><a href="/2016/group20/requirements.html">Requirements</a></li>
-                <li><a class="dropdown-button" data-activates="dropdown" data-beloworigin="true">Research<i
+                <li><a class="dropdown-button" data-activates="research_dropdown" data-beloworigin="true">Research<i
                         class="material-icons right">arrow_drop_down</i></a>
                 </li>
-                <li><a href="/2016/group20/prototype.html">Prototype</a></li>
+                <li><a class="dropdown-button" data-activates="prototype_dropdown" data-beloworigin="true">Prototypes<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
                 <li><a href="/2016/group20/testing.html">Testing</a></li>
             </ul>
         </div>
     </nav>
 </nav>
 
-<ul id="dropdown" class="dropdown-content">
+<ul id="research_dropdown" class="dropdown-content">
     <li><a href="/2016/group20/dev_methods.html">Development Methods</a></li>
     <li><a href="/2016/group20/technical.html">Technical Report</a></li>
+</ul>
+
+<ul id="prototype_dropdown" class="dropdown-content">
+    <li><a href="/2016/group20/ui.html">UI Mockups</a></li>
+    <li><a href="/2016/group20/database.html">Database</a></li>
 </ul>
 
 <!-- Intro End -->
@@ -114,92 +121,126 @@
         guide.
     </p>
     <div class="card row">
-        <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a class="active" href="#login">Login</a></li>
-            <li class="tab"><a href="#user">User Profile</a></li>
-            <li class="tab"><a href="#homepage">Homepage</a></li>
-            <li class="tab"><a href="#over_request">Overtime Request</a></li>
-            <li class="tab"><a href="#over_confirm">Overtime Confirmation</a></li>
-        </ul>
-    </div>
-
-    <div id="login">
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="/2016/group20/img/wireframes/login/login.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/login/signup.png">
-                </li>
+        <div class="card-content">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#login">Login</a></li>
+                <li class="tab"><a href="#user">User Profile</a></li>
+                <li class="tab"><a href="#homepage">Homepage</a></li>
+                <li class="tab"><a href="#over_request">Overtime Request</a></li>
+                <li class="tab"><a href="#over_confirm">Overtime Confirmation</a></li>
             </ul>
+
+            <br>
+
+            <div id="login">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="/2016/group20/img/wireframes/login/login.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/login/signup.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="user">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="/2016/group20/img/wireframes/profile/profile1.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/profile/profile2.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/profile/profile3.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="homepage">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="/2016/group20/img/wireframes/homepage/homepage.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/homepage/profile_icon.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="over_request">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="/2016/group20/img/wireframes/overtime\ request/request1.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/overtime\ request/request2.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/overtime\ request/request3.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/overtime\ request/request4.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/overtime\ request/request5.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="over_confirm">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="/2016/group20/img/wireframes/overtime\ confirmation/confirm1.png">
+                        </li>
+                        <li>
+                            <img src="/2016/group20/img/wireframes/overtime\ confirmation/confirm2.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="user">
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="/2016/group20/img/wireframes/profile/profile1.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/profile/profile2.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/profile/profile3.png">
-                </li>
-            </ul>
+    <br>
+
+</div>
+
+<div class="light-blue lighten-1">
+    <div class="section container">
+        <h2 class="white-text">Database Creation</h2>
+        <div class="divider"></div>
+
+        <div class="card row">
+            <div class="card-content">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a href="#schema">Schema</a></li>
+                    <li class="tab"><a href="#code">Code</a></li>
+                </ul>
+
+                <br>
+
+                <div id="code">
+                    <iframe src="https://drive.google.com/file/d/0B7PFGHt-zxyBSU5kZ0NmeTVpdE0/preview" width=100%
+                            height=480px></iframe>
+                </div>
+
+                <div id="schema">
+                    <iframe src="https://drive.google.com/file/d/0B7PFGHt-zxyBM2hXdUptYnZhVFE/preview" width=100%
+                            height="480"></iframe>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div id="homepage">
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="/2016/group20/img/wireframes/homepage/homepage.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/homepage/profile_icon.png">
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="over_request">
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="/2016/group20/img/wireframes/overtime\ request/request1.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/overtime\ request/request2.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/overtime\ request/request3.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/overtime\ request/request4.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/overtime\ request/request5.png">
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="over_confirm">
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="/2016/group20/img/wireframes/overtime\ confirmation/confirm1.png">
-                </li>
-                <li>
-                    <img src="/2016/group20/img/wireframes/overtime\ confirmation/confirm2.png">
-                </li>
-            </ul>
-        </div>
-    </div>
-
 </div>
 
 

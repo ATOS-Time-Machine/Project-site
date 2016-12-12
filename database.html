@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD Start -->
+
+<head>
+    
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Team project website for group 20 - ATOS Time Machine">
+    <meta name="author" content="Group 20">
+    <meta name="keywords" content="atos, time, machine, group, 20, jekyll">
+    <link rel="canonical" href="/2016/group20/database.html">
+    <title>ATOS Time Machine</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/2016/group20/img/favicon.ico">
+    
+
+    <!---->
+
+    
+
+
+
+    
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="">
+
+
+    
+
+
+
+</head>
+
+<!-- HEAD End -->
+
+
+<body>
+
+<!-- Intro Start -->
+
+<nav class="navbar-fixed">
+    <nav class="light-blue darken-1" role="navigation">
+        <div class="nav-wrapper container">
+            <div class="brand-logo left active waves-effect wave-light">
+                <a id="logo-container"
+                   href="/2016/group20/">Group
+                    20</a></div>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://github.com/orgs/ATOS-Time-Machine/" target="_blank">Github</a></li>
+                <li><a href="/2016/group20/background.html">Background</a></li>
+                <li><a href="/2016/group20/requirements.html">Requirements</a></li>
+                <li><a class="dropdown-button" data-activates="research_dropdown" data-beloworigin="true">Research<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <li><a class="dropdown-button" data-activates="prototype_dropdown" data-beloworigin="true">Prototypes<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <li><a href="/2016/group20/testing.html">Testing</a></li>
+            </ul>
+        </div>
+    </nav>
+</nav>
+
+<ul id="research_dropdown" class="dropdown-content">
+    <li><a href="/2016/group20/dev_methods.html">Development Methods</a></li>
+    <li><a href="/2016/group20/technical.html">Technical Report</a></li>
+</ul>
+
+<ul id="prototype_dropdown" class="dropdown-content">
+    <li><a href="/2016/group20/ui.html">UI Mockups</a></li>
+    <li><a href="/2016/group20/database.html">Database</a></li>
+</ul>
+
+<!-- Intro End -->
+
+
+<div class="light-blue lighten-1">
+    <br><br>
+
+    <h1 class="center white-text">Database</h1>
+    <br><br>
+</div>
+
+<nav>
+    <div class="nav-wrapper">
+        <div class="container col">
+            <a href="/2016/group20/" class="breadcrumb">Home</a>
+            <a class="breadcrumb">Prototype</a>
+            <a href="" class="breadcrumb">Database</a>
+        </div>
+    </div>
+</nav>
+
+<div class="section container">
+    <h2>Database Experiments</h2>
+    <div class="divider"></div>
+
+    <div class="card">
+        <div class="card-content">
+            <div class="row">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a href="#ex1">Experiment 1</a></li>
+                    <li class="tab"><a href="#ex2">Experiment 2</a></li>
+                    <li class="tab"><a href="#ex3">Experiment 3</a></li>
+                    <li class="tab"><a href="#ex4">Experiment 4</a></li>
+                </ul>
+            </div>
+
+            <div id="ex1">
+                <h4>Experiment 1 - Find the most appropriate DBMS</h4>
+                <p>We narrowed down a list of DBMSs to the most common ones (SQL Server, Oracle SQL, SQLite and MySQL)
+                    and we performed some tests to decided which one do adopt for this project.</p>
+                <table class="striped responsive-table">
+                    <thead>
+                    <tr>
+                        <th>Experiment No.</th>
+                        <th>Experiment Title</th>
+                        <th>Experiment Details</th>
+                        <th>Experiment Results</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Dealing with different platforms</td>
+                        <td>We have tried to install and perform small tasks (e.g. create a simple table) for every of
+                            the proposed DBMS in the following Operative Systems: Windows; UNIX-based systems.
+                        </td>
+                        <td>As SQL Server is only available on Windows platform, we decided to discard it.</td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>Dealing with proprietary software</td>
+                        <td>To avoid intellectual property issues, we decided to research whether or not the proposed
+                            DBMS use a proprietary license
+                        </td>
+                        <td>As Oracle SQL use a proprietary license, we decided to discard it</td>
+                    </tr>
+                    <tr>
+                        <td>1.3</td>
+                        <td>Data types variety</td>
+                        <td>To facilitate further database improvements and extensions, we opted for a DBMS that allows
+                            as many data types as possible. Using each integrated environment, we had access to a list
+                            of all the available data types for each DBMS and we could therefore compare them
+                        </td>
+                        <td>As SQLite offers way less data types than MySQL does, we decided to discard it. We
+                            eventually chose to use MySQL as DBMS to use for this project
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="ex2">
+                <h4>Experiment 2 - Find the most appropriate MySQL Engine</h4>
+                <p>Once decided which DBMS to go for, we had to decide whether to adopt MyISAM or Innodb as table
+                    engine.</p>
+                <table class="striped responsive-table">
+                    <thead>
+                    <tr>
+                        <th>Experiment No.</th>
+                        <th>Experiment Title</th>
+                        <th>Experiment Details</th>
+                        <th>Experiment Results</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Following ACID properties</td>
+                        <td>Given the potential frequency of use of the system, we decided that ACID transactions had to
+                            be used to maintain data integrity. We therefore researched which engine made use of ACID
+                            properties
+                        </td>
+                        <td>Consequently to our research, we found out that MyISAM does not offer ACID proprieties
+                            whilst Innodb does
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.2</td>
+                        <td>Speed</td>
+                        <td>Given the potential size of the system, we decided that speed was also to prioritise. We
+                            therefore researched which engine performed faster operations
+                        </td>
+                        <td>Consequently to our research, we found out that MyISAM is slightly faster as it does not
+                            offer ACID proprieties
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.3</td>
+                        <td>Finding a compromise</td>
+                        <td>After performing some speed tests on our database, we found out the difference of speed
+                            between the two systems is not sensibly big, even performing multiple complicated
+                            calculations at the same time
+                        </td>
+                        <td>We decided to value the ACID properties more than speed as data integrity is much more
+                            important for this particular project. Therefore we chose Innodb as engine to use for this
+                            project
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="ex3">
+                <h4>Experiment 3 - Data Normalisation and Standardisation</h4>
+                <p>We went through the process of Data Normalisation and Standardisation for our Database and changed it
+                    accordingly</p>
+                <table class="striped responsive-table">
+                    <thead>
+                    <tr>
+                        <th>Experiment No.</th>
+                        <th>Experiment Title</th>
+                        <th>Experiment Details</th>
+                        <th>Experiment Results</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>3.1</td>
+                        <td>Data Normalisation and Standardisation</td>
+                        <td>Performed usual checks to see whether the created database respect the 1 st , 2 nd and 3 rd
+                            Normal Form and researched about the most used data standards
+                        </td>
+                        <td>Performed usual checks to see whether the created database respect the 1 st , 2 nd and 3 rd
+                            Normal Form and researched about the most used data standards
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="ex4">
+                <h4>Experiment 4 - Dealing with fields’ data types</h4>
+                <p>We needed to check the previous system and perform some tests on the new system’s fields to optimally
+                    satisfy the user requirements.</p>
+                <table class="striped responsive-table">
+                    <thead>
+                    <tr>
+                        <th>Experiment No.</th>
+                        <th>Experiment Title</th>
+                        <th>Experiment Details</th>
+                        <th>Experiment Results</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>4.1</td>
+                        <td>Checking the data behaviour of the existing solution</td>
+                        <td>Checked the behaviour of inserting any type of data in any field of the existing solution
+                        </td>
+                        <td>Came up with a list of behaviours for each fields</td>
+                    </tr>
+                    <tr>
+                        <td>4.2</td>
+                        <td>Perform complicated overtime calculations</td>
+                        <td>We performed some calculations on huge salaries and compared the outcome results with the
+                            ones of the existing system
+                        </td>
+                        <td>Switched travelCost and callout fields from FLOAT to to CONCURRENCY type</td>
+                    </tr>
+                    <tr>
+                        <td>4.3</td>
+                        <td>Trying to put NULL values</td>
+                        <td>We checked the errors thrown in case we omit any value</td>
+                        <td>To not overcomplicate the system, we set every field’s boundary to NOT NULL</td>
+                    </tr>
+                    <tr>
+                        <td>4.4</td>
+                        <td>Fetch the example IDs into our Database</td>
+                        <td>As we were undecided whether to use INT or TEXT type for IDs, we performed some research on
+                            the standard and the requirements of the system
+                        </td>
+                        <td>We used TEXT for staffID as required from the client, but we used INT for the other keys for
+                            a performance and standardisation matter
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="light-blue lighten-1">
+    <div class="section container">
+        <h2 class="white-text">Database Creation</h2>
+        <div class="divider"></div>
+
+        <div class="card row">
+            <div class="card-content">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a href="#schema">Schema</a></li>
+                    <li class="tab"><a href="#code">Code</a></li>
+                </ul>
+
+                <br>
+
+                <div id="code">
+                    <iframe src="https://drive.google.com/file/d/0B7PFGHt-zxyBSU5kZ0NmeTVpdE0/preview" width=100%
+                            height=480px></iframe>
+                </div>
+
+                <div id="schema">
+                    <iframe src="https://drive.google.com/file/d/0B7PFGHt-zxyBM2hXdUptYnZhVFE/preview" width=100%
+                            height="480"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Javascript Start -->
+
+<!--&lt;!&ndash; jQuery &ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+<!--&lt;!&ndash; Bootstrap Core JavaScript &ndash;&gt;-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
+<!--&lt;!&ndash; Plugin JavaScript &ndash;&gt;-->
+<!--<scripto src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></scripto>-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="/2016/group20/js/init.js"></script>
+<script src="/2016/group20/js/modernizr.js"></script>
+<script src="/2016/group20/js/timeline.js"></script>
+
+
+
+<!-- Custom Theme JavaScript -->
+<!--* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.-->
+<!--<script>-->
+<!--function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}-->
+<!--$(document).ready(toggleNavCollapse);-->
+<!--$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});-->
+<!--</script>-->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!--<script>-->
+<!--function addTohistory() {-->
+  <!--if (!window.location.host.startsWith("127.0.0.1")) {-->
+    <!--history.pushState({}, '', 'http://localhost:4000/2016/group20/database.html');-->
+  <!--}-->
+<!--}-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Gesture Navigation / Swipe Instruction Start &ndash;&gt;-->
+<!---->
+
+<!--&lt;!&ndash; Javascript End &ndash;&gt;-->
+
+
+</body>
+</html>
