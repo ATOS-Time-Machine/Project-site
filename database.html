@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <style type="text/css">
+        
+        .highlight{background-color:#444;margin:0 0}.highlight pre{padding:16px 16px}.highlight pre code{font-family:'Source Code Pro', monospace;background-color:transparent}
+
+    </style>
+    <link rel="stylesheet" href="/2016/group20/css/highlight.css">
+
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -66,7 +73,7 @@
                     20</a></div>
             <ul class="right hide-on-med-and-down">
                 <li><a href="https://github.com/orgs/ATOS-Time-Machine/" target="_blank">Github</a></li>
-                <li><a href="/2016/group20/background.html">Background</a></li>
+                <li><a href="/2016/group20/planning.html">Planning</a></li>
                 <li><a href="/2016/group20/requirements.html">Requirements</a></li>
                 <li><a class="dropdown-button" data-activates="research_dropdown" data-beloworigin="true">Research<i
                         class="material-icons right">arrow_drop_down</i></a>
@@ -83,6 +90,7 @@
 <ul id="research_dropdown" class="dropdown-content">
     <li><a href="/2016/group20/dev_methods.html">Development Methods</a></li>
     <li><a href="/2016/group20/technical.html">Technical Report</a></li>
+    <li><a href="/2016/group20/investigation.html">Investigation</a></li>
 </ul>
 
 <ul id="prototype_dropdown" class="dropdown-content">
@@ -316,13 +324,35 @@
                 <br>
 
                 <div id="code">
-                    <iframe src="https://drive.google.com/file/d/0B7PFGHt-zxyBSU5kZ0NmeTVpdE0/preview" width=100%
-                            height=480px></iframe>
+                    <iframe src="https://drive.google.com/file/d/0B9v_piN3K2HGZ0pHNTlWdFk3VTQ/preview" width=100%
+                            height="480"></iframe>
+
+                    <!--<p>First, we need to create the Database. We decided to use Upper Camel convention.</p>-->
+                    <!--<div>-->
+                        <!--<figure class="highlight"><pre><code class="language-rust" data-lang="rust"><span class="o">-</span><span class="k">-&gt;</span>
+                        <span class="o">&lt;!--</span><span class="n">CREATE</span> <span class="n">DATABASE</span> <span class="n">TimeMachineDB</span><span class="p">;</span><span class="o">-</span><span class="k">-&gt;</span>
+                        <span class="o">&lt;!--</span></code></pre></figure>-->
+                    <!--</div>-->
+
+                    <!--<p>For creating each table, we need to specify the database they are going to be put in as well-->
+                        <!--as-->
+                        <!--the name of the table itself as such: DatabaseName.TableName. No record can be NULL.</p>-->
+
+                    <!--<p>The first table to be created, will contain every task to be performed. It will be formed by-->
+                        <!--a-->
+                        <!--description of the task and the unique task ID used as the table’s primary key.</p>-->
+
+                    <!--<div>-->
+                        <!--<figure class="highlight"><pre><code class="language-rust" data-lang="rust"><span class="o">-</span><span class="k">-&gt;</span>
+                        <span class="o">&lt;!--</span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">TimeMachineDB</span><span class="nf">.Tasks</span> <span class="p">(</span><span class="n">taskID</span> <span class="n">INT</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span><span class="o">-</span><span class="k">-&gt;</span>
+                        <span class="o">&lt;!--</span><span class="n">description</span> <span class="n">TEXT</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span><span class="o">-</span><span class="k">-&gt;</span>
+                        <span class="o">&lt;!--</span><span class="n">PRIMARY</span> <span class="nf">KEY</span> <span class="p">(</span><span class="n">taskID</span><span class="p">));</span><span class="o">-</span><span class="k">-&gt;</span>
+                        <span class="o">&lt;!--</span></code></pre></figure>-->
+                    <!--</div>-->
                 </div>
 
                 <div id="schema">
-                    <iframe src="https://drive.google.com/file/d/0B7PFGHt-zxyBM2hXdUptYnZhVFE/preview" width=100%
-                            height="480"></iframe>
+                    <img class="center" src="/2016/group20/img/database_schema.png">
                 </div>
             </div>
         </div>
