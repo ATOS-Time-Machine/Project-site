@@ -1,0 +1,306 @@
+<!-- 404 Layout Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD Start -->
+
+<head>
+    
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Team project website for group 20 - ATOS Time Machine">
+    <meta name="author" content="Group 20">
+    <meta name="keywords" content="atos, time, machine, group, 20, jekyll">
+    <link rel="canonical" href="/2016/group20/testing.html">
+    <title>ATOS Time Machine</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/2016/group20/img/favicon.ico">
+    
+
+    
+
+    
+
+
+
+    
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="">
+
+
+    
+
+
+
+</head>
+
+<!-- HEAD End -->
+
+
+<body>
+
+<!-- Intro Start -->
+
+<nav class="navbar-fixed">
+    <nav class="light-blue darken-1" role="navigation">
+        <div class="nav-wrapper container">
+            <div class="brand-logo left active waves-effect wave-light">
+                <a id="logo-container"
+                   href="/2016/group20/">Group
+                    20</a></div>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://github.com/orgs/ATOS-Time-Machine/" target="_blank">Github</a></li>
+                <li><a href="/2016/group20/background.html">Background</a></li>
+                <li><a href="/2016/group20/requirements.html">Requirements</a></li>
+                <li><a class="dropdown-button" data-activates="dropdown" data-beloworigin="true">Research<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <li><a href="/2016/group20/prototype.html">Prototype</a></li>
+                <li><a href="/2016/group20/testing.html">Testing</a></li>
+            </ul>
+        </div>
+    </nav>
+</nav>
+
+<ul id="dropdown" class="dropdown-content">
+    <li><a href="/2016/group20/dev_methods.html">Development Methods</a></li>
+    <li><a href="/2016/group20/technical.html">Technical Report</a></li>
+</ul>
+
+<!-- Intro End -->
+
+
+<div class="light-blue lighten-1 ">
+    <br><br>
+
+    <h1 class="center white-text">Testing & Toolchain</h1>
+    <br><br>
+</div>
+
+<nav>
+    <div class="nav-wrapper">
+        <div class="container col">
+            <a href="/2016/group20/" class="breadcrumb">Home</a>
+            <a href="" class="breadcrumb">Testing & Toolchain</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container section">
+    <h3>Testing</h3>
+    <div class="divider"></div>
+    <p>
+        In order to make sure that our project adheres to the requirements elicited from our client, we will be putting
+        a great deal of focus on testing ensuring that it upheld throughout the development process. The following
+        details on this page explore the testing strategies that we will be employing.
+    </p>
+    <br>
+
+    <h4>Unit Testing</h4>
+    <p>
+        Unit testing is a method of testing which can be utilised to test individual components of the system. We will
+        be setting up these unit tests to operate automatically alongside our automatic deployment from github whenever
+        there is a push to the main branch, ensuring that this push did not cause any damage to the web application. In
+        order to conduct these unit tests automatically we plan to make use of several different unit testing
+        frameworks. For the PHP + MYSQL backend we plan on utlising PHPUnit which is a popular PHP unit testing
+        framework which produces HTML reports with code coverage. For our front-end we plan on using Unit.js which is a
+        unit testing framework for javascript which works with any other testing framework and assertion library which
+        will provide more flexibility for later in development.
+    </p>
+    <br>
+
+    <h4>Integration & Functional Testing</h4>
+    <p>
+        We will also using integration testing to make sure that all of the components within our system interconnect
+        and function appropriately. Functional testing will be carried out in order to make sure that the system adheres
+        to the functional requirements in order to produce a satisfactory web application for our clients. We have
+        decided to accomplish this by using Selenium which is a commonly used open-source testing framework tailored
+        towards testing web applications. This will allow us to send specific commands to the browser when our web
+        application is open such that we can test the result and make sure its behaviour is as expected.
+    </p>
+    <br>
+
+    <h4>User Acceptance Testing</h4>
+    <p>
+        Our main goal with this project is to ensure that we create a web application that our clients are clients are
+        content with. In order to this we will maintaining consistent communication with our clients. We plan to
+        incorporate user acceptance testing into our bi-weekly sprints as soon as we get the user interface to a stage
+        where it will be easy for our clients to use. We’ll make to have test scenarios so we can focus down the
+        features that they are testing and make sure they are aware of what we want them to accept.
+    </p>
+    <br>
+
+    <h3>Toolchain</h3>
+    <div class="divider"></div>
+
+    <div class="row section">
+        <div class="col s36 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Browsers</span>
+                    <div class="divider"></div>
+                    <ul class="browser-default">
+                        <li>Chrome</li>
+                        <li>Safari</li>
+                        <li>Edge</li>
+                        <li>Firefox</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s36 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Languages, Frameworks, Libraries</span>
+                    <div class="divider"></div>
+                    <ul class="browser-default">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>MYSQL</li>
+                        <li>NodeJS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s36 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Deployment & Automation</span>
+                    <div class="divider"></div>
+                    <ul class="browser-default">
+                        <li>Cloud Server- Azure</li>
+                        <li>Script for automatic build for each version control push</li>
+                        <li>Script for automatic restart on server reboot</li>
+                        <li>Script for automatic database backups</li>
+                        <li>Script for automating unit tests for each build</li>
+                        <li>Script for moving staging build to production server</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row section">
+        <div class="col s36 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Text editors</span>
+                    <div class="divider"></div>
+                    <ul class="browser-default">
+                        <li>Sublime Text 3</li>
+                        <li>Atom</li>
+                        <li>WebStorm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s36 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Design & Graphical Software</span>
+                    <div class="divider"></div>
+                    <ul class="browser-default">
+                        <li>Balsamiq Mockups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s36 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Version Control</span>
+                    <div class="divider"></div>
+                    <ul class="browser-default">
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Javascript Start -->
+
+<!--&lt;!&ndash; jQuery &ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+<!--&lt;!&ndash; Bootstrap Core JavaScript &ndash;&gt;-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
+<!--&lt;!&ndash; Plugin JavaScript &ndash;&gt;-->
+<!--<scripto src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></scripto>-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="/2016/group20/js/init.js"></script>
+<script src="/2016/group20/js/modernizr.js"></script>
+<script src="/2016/group20/js/timeline.js"></script>
+
+
+
+<!-- Custom Theme JavaScript -->
+<!--* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.-->
+<!--<script>-->
+<!--function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}-->
+<!--$(document).ready(toggleNavCollapse);-->
+<!--$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});-->
+<!--</script>-->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!---->
+
+<!--<script>-->
+<!--function addTohistory() {-->
+  <!--if (!window.location.host.startsWith("127.0.0.1")) {-->
+    <!--history.pushState({}, '', 'http://localhost:4000/2016/group20/testing.html');-->
+  <!--}-->
+<!--}-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Gesture Navigation / Swipe Instruction Start &ndash;&gt;-->
+<!---->
+
+<!--&lt;!&ndash; Javascript End &ndash;&gt;-->
+
+
+</body>
+</html>
+
+<!-- 404 Layout End -->
