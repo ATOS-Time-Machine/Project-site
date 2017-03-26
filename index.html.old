@@ -1,0 +1,27 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: base
+---
+<div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="http://onguard.com/wp-content/uploads/2015/11/Atos-office.jpg"></div>
+    </div>
+    <div>
+        <div id="blue" class="">
+            <nav class="pushpin" data-target="blue">
+                <div class="nav-wrapper container">
+                    <a class="brand-logo">Specification</a>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <div class="nav-wrapper container">
+                    <a class="brand-logo">Timeline</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

@@ -1,13 +1,34 @@
-<div id="navigation" class="block">
-    <nav class="pushpin" data-target="">
+<nav class="navbar-fixed">
+    <nav class="light-blue darken-1" role="navigation">
         <div class="nav-wrapper container">
-            <a href="/" class="brand-logo"><img src="/img/atos.png" height="35"></a>
-            <ul class="right">
-                <li><a href="">Specification</a></li>
-                <li><a href="{{ site.data.routes.documentation }}">Documentation</a></li>
-                <li><a>Project</a></li>
-                <li><a>About</a></li>
+            <div class="brand-logo left active waves-effect wave-light">
+                <a id="logo-container"
+                   href="/2016/group20/">Group
+                    20</a></div>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://github.com/orgs/ATOS-Time-Machine/" target="_blank">Github</a></li>
+                <li><a href="/2016/group20/planning">Planning</a></li>
+                <li><a href="/2016/group20/requirements">Requirements</a></li>
+                <li><a class="dropdown-button" data-activates="research_dropdown" data-beloworigin="true">Research<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <li><a class="dropdown-button" data-activates="prototype_dropdown" data-beloworigin="true">Prototypes<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <li><a href="/2016/group20/testing">Testing</a></li>
             </ul>
         </div>
     </nav>
-</div>
+</nav>
+
+
+<ul id="research_dropdown" class="dropdown-content">
+    <li><a href="{{ site.baseurl }}/research/dev_methods">Development Methods</a></li>
+    <li><a href="{{ site.baseurl }}/research/technical">Technical Report</a></li>
+    <li><a href="{{ site.baseurl }}/research/investigation">Investigation</a></li>
+</ul>
+
+<ul id="prototype_dropdown" class="dropdown-content">
+    <li><a href="{{ site.baseurl }}/prototypes/ui">UI Mockups</a></li>
+    <li><a href="{{ site.baseurl }}/prototypes/database">Database</a></li>
+</ul>
