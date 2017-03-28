@@ -11,6 +11,15 @@
                 <br><br>
             </div>
         </header>
+        <nav>
+            <div class="nav-wrapper">
+                <div class="container col">
+                    <a href="" class="breadcrumb">Home</a>
+                    <a href="" class="breadcrumb">{{ page.title }}</a>
+                </div>
+            </div>
+        </nav>
+        <p>{{ page.path }}</p>
         {{ content }}
 
         {% include js.html %}
