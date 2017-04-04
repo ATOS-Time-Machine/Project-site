@@ -34,3 +34,5 @@ exclude:
 collections:
   - api
   - home
+  - achievements
+  - critical

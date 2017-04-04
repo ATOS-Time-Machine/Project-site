@@ -13,12 +13,13 @@
                 <li><a class="dropdown-button" data-activates="research_dropdown" data-beloworigin="true">Research<i
                         class="material-icons right">arrow_drop_down</i></a>
                 </li>
-                <li><a class="dropdown-button" data-activates="prototype_dropdown" data-beloworigin="true">HCI<i
+                <li><a class="dropdown-button" data-activates="hci_dropdown" data-beloworigin="true">HCI<i
                         class="material-icons right">arrow_drop_down</i></a>
                 </li>
                 <li><a href="">Design</a></li>
                 <li><a href="/2016/group20/testing">Testing</a></li>
-                <li><a href="">Evaluation</a></li>
+                <li><a class="dropdown-button" data-activates="eval_dropdown" data-beloworigin="true">Evaluation<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a class="dropdown-button" data-activates="documentation_dropdown" data-beloworigin="true">Documentation<i
                         class="material-icons right">arrow_drop_down</i></a>
                 </li>
@@ -29,6 +30,7 @@
 
 <ul id="documentation_dropdown" class="dropdown-content">
     <li><a href="{{ site.baseurl }}/documentation/api">API</a></li>
+    <li><a href="{{ site.baseurl }}/documentation/system">System Manual</a></li>
 </ul>
 
 <ul id="research_dropdown" class="dropdown-content">
@@ -37,7 +39,12 @@
     <li><a href="{{ site.baseurl }}/research/investigation">Investigation</a></li>
 </ul>
 
-<ul id="prototype_dropdown" class="dropdown-content">
+<ul id="hci_dropdown" class="dropdown-content">
     <li><a href="{{ site.baseurl }}/prototypes/ui">UI Mockups</a></li>
     <li><a href="{{ site.baseurl }}/prototypes/database">Database</a></li>
+</ul>
+
+<ul id="eval_dropdown" class="dropdown-content">
+    <li><a href="{{ site.baseurl }}/evaluation/achievements">Achievements</a></li>
+    <li><a href="{{ site.baseurl }}/evaluation/critical">Crtiical Assessment</a></li>
 </ul>

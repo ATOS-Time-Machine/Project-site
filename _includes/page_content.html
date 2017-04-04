@@ -1,0 +1,19 @@
+{% for section in contents %}
+    {% assign mod = forloop.index | modulo:2 %}
+    {% if mod == 1 %}
+        <div class="section container">
+            <h2>{{ section.title }}</h2>
+            <div class="divider"></div>
+            {{ section.content }}
+        </div>
+    {% else %}
+        <div class="light-blue lighten-1">
+            <div class="section container">
+                <h2 class="white-text">{{ section.title }}</h2>
+                <div class="divider"></div>
+                {{ section.content }}
+            </div>
+        </div>
+    {% endif %}
+    </div>
+{% endfor %}
