@@ -27,6 +27,7 @@ keywords: "atos, time, machine, group, 20, jekyll"
 # theme: minima
 gems:
   - jekyll-redirect-from
+  - jekyll/scholar
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -38,3 +39,6 @@ collections:
   - design
   - system
   - hci
+
+scholar:
+  style: "/css/ieee.csl"
