@@ -39,6 +39,7 @@ collections:
   - design
   - system
   - hci
+  - evaluation
 
 scholar:
   style: "/css/ieee.csl"
