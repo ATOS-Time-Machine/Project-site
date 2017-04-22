@@ -8,4 +8,5 @@ $(document).ready(function () {
 
   $('.slider').slider();
   
+  $('ul.tabs').tabs();
 });

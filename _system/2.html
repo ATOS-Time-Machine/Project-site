@@ -1,5 +1,112 @@
 ---
-title: Example
-tag: example
+title: Deployment
+tag: deploy
 ---
-<p>This is an example section.</p>
+First we need to setup 2 bare repositories on our server, one for the frontend and another for the backend. This can be setup
+anywhere but we chose <code class="language-bash">/var/repo</code>.
+
+<pre><code class="language-bash">
+# Make the parent repo directory
+cd /var/
+sudo mkdir repo && cd repo/
+
+# Give ourselves ownership of the directory.
+# While we're at it, claim /var/www/html where apache2 hosts
+sudo chown -R `whoami`:`id -gn` /var/repo
+sudo chown -R `whoami`:`id -gn` /var/www/html
+
+# Make the 2 directories for our repositories
+mkdir frontend && mkdir backend
+</code></pre>
+
+<p>Now that we've made the folders for our repositories, we need to create the bare git repos. Cd into both directories and do the following</p>
+<pre><code class="language-bash">
+git init --bare
+</code></pre>
+
+Now we need to create a hook to deploy the systems. We will start with the frontend:
+
+<pre><code class="language-bash">
+# First cd into the hooks directory for our frontend
+cd /var/repo/frontend/hooks
+
+# Create and edit a file called post-receive
+vim post-receive
+
+# Make file executable
+chmod +x post-receive
+</code></pre>
+
+Our post-receive file looks like this:
+<pre><code class="language-bash">
+#!/bin/bash
+while read oldrev newrev ref
+do
+        if [[ $ref =~ .*/master$ ]];
+        then
+                echo "Master ref received. Deploying master branch..."
+                git --work-tree=/var/www/html --git-dir=/var/repo/frontend checkout -f
+        else
+                echo "Ref $ref successfully received. Doing nothing: only the master branch may be deployed on this server."
+        fi
+done
+</code></pre>
+This will result in new pushes to the master branch automatically being unpackaged in the <code class="language-bash">/var/www/html</code> directory
+which is the root of Apache's host directory. There are also some output messages to provide confirmation.
+
+<p>Now create a backend post-receive hook:</p>
+<pre><code class="language-bash">
+cd /var/repo/backend/hooks
+vim post-receive
+chmod +x post-receive
+</code></pre>
+This post-receive hook will be different as it needs to manage our NodeJS application:
+<pre><code class="language-bash">
+#!/bin/bash
+while read oldrev newrev ref
+do
+        if [[ $ref =~ .*/master$ ]];
+        then
+                echo "Master ref received. Deploying master branch..."
+                git --work-tree=/var/www/backend --git-dir=/var/repo/backend checkout -f
+        else
+                echo "Ref $ref successfully received. Doing nothing: only the master branch may be deployed on this server."
+        fi
+done
+
+chmod +x /var/www/backend/app.js
+
+if (service timemachine status > /dev/null)
+then
+        echo "Service running. Stopping service..."
+        sudo service timemachine stop > /dev/null
+        echo "Service stopped."
+else
+        echo "Service not running.."
+fi
+
+echo "Installing packages.."
+npm --prefix /var/www/backend/ install /var/www/backend
+echo "Starting service..."
+sudo service timemachine start > /dev/null
+
+if (service timemachine status > /dev/null)
+then
+        echo "Timemachine service started successfully."
+else
+        echo "Timemachine service unable to be started. Please debug."
+fi
+</code></pre>
+This script checks if the application service is running and stops it if it is. It will then perform an NPM install in case
+any new dependency packages are required for the application and will then start the service.
+
+<p>The frontend and backend can now be deployed to by pushing to it.</p>
+<pre><code class="language-bash">
+# Add remote to your local git clone of the frontend repository
+git remote add live ssh://[[server address]]:/var/repo/frontend
+git push live master
+
+# For the backend
+git remote add live ssh://[[server address]]:/var/repo/backend
+git push live master
+</code></pre>
