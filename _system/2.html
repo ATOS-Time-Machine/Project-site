@@ -103,10 +103,10 @@ any new dependency packages are required for the application and will then start
 <p>The frontend and backend can now be deployed to by pushing to it.</p>
 <pre><code class="language-bash">
 # Add remote to your local git clone of the frontend repository
-git remote add live ssh://[[server address]]:/var/repo/frontend
+git remote add live ssh://[[user]]@[[server address]]:/var/repo/frontend
 git push live master
 
 # For the backend
-git remote add live ssh://[[server address]]:/var/repo/backend
+git remote add live ssh://[[user]]@[[server address]]:/var/repo/backend
 git push live master
 </code></pre>
