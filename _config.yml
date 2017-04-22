@@ -42,6 +42,7 @@ collections:
   - hci
   - evaluation
   - timeline
+  - host
 
 scholar:
   style: "/css/ieee.csl"

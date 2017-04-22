@@ -1,0 +1,41 @@
+---
+title: Create An Application Service
+tag: service
+---
+<p>
+    Thanks to Apache, our frontend will respond to HTTP requests when someone accesses the website. However,
+    the backend is run using NodeJS and is required to be started otherwise our frontend application will be
+    unable to communicate with the database.
+</p>
+<p>
+    To get around this, we setup a service on the server which starts the NodeJS backend whenever it crashes or
+    the server restarts. Additionally, it will give us an easy way of manually starting/stopping the application
+    ourselves should we need to debug or automate (this will come up later).
+</p>
+
+<p>First we create the service file</p>
+<pre><code class="language-bash">
+
+</code></pre>
+
+Then we enable the service:
+<pre><code class="language-bash">
+sudo systemctl enable timemachiine.service
+sudo systemctl daemon-reload
+sudo systemctl restart timemachine.service
+</code></pre>
+
+Provided all is working, we will now be able to manage the service using the commands
+<pre><code class="language-bash">
+# Check service status
+service timemachine status
+
+# Start service
+sudo service timemachine start
+
+# Stop service
+sudo service timemachine stop
+
+# Restart service
+sudo service timemachine restart
+</code></pre>

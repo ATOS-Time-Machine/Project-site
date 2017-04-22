@@ -9,8 +9,27 @@ title: System Manual
         </ul>
     </div>
 </nav>-->
-{% assign contents = site.system %}
-<div>
+
+
+<div id="host">
+    {% assign contents = site.host %}
+    <div class="row">
+        <div class="col s12 m9 l10">
+            {% for api in contents %}
+                <div id="{{ api.tag }}" class="section scrollspy">
+                    <h3>{{ api.title }}</h3>
+                    {{ api.content }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="">
+            {% include contents_table.html %}
+        </div>
+    </div>
+</div>
+
+<div id="system">
+    {% assign contents = site.system %}
     <div class="row">
         <div class="col s12 m9 l10">
             {% for api in contents %}

@@ -1,0 +1,36 @@
+---
+title: Dependency Installation
+tag: setup
+---
+<p>
+    For this application, we make use of NodeJS and MySQL to power our backend API and database respectively. For our frontend which is used to demonstrate 
+    the capabilities of our API, we have employed Apache2 HTTP Server. These tools are available on a variety of operating systems and as a result, 
+    this setup can be hosted on a variety of machines.
+</p>
+
+<h4>Our Server</h4>
+<p>
+    For our demonstration purposes, we hosted on Ubuntu Server 16.04, making use of Microsoft Azure's virtual machine service. As part of 
+    this setup, HTTP traffic on port 80 needs to be allowed. This can be done on the configuration page of the Azure portal or any 
+    hosting service you make use of.
+</p>
+
+<h4>Software Installation</h4>
+<p>For our application, we will be installing:</p>
+<ul class="browser-default">
+    <li>Apache2</li>
+    <li>MySQL</li>
+    <li>NodeJS</li>
+</ul>
+<p>Additionally we will install Git for deployment purposes.</p>
+<p>The following code will install the necessary packages on Ubuntu.</p>
+<pre><code class="language-bash">
+sudo apt-get update
+sudo apt-get install apache2 mysql nodejs
+
+# Installs NPM, package manager for Node
+sudo apt-get install npm
+
+# Install Git
+sudo apt-get install git
+</code></pre>
