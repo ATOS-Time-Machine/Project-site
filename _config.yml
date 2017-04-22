@@ -45,3 +45,5 @@ collections:
 
 scholar:
   style: "/css/ieee.csl"
+
+exclude: [build.sh]
