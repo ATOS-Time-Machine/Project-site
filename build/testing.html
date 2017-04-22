@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--Materialize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/2016/group20/css/prism.css">
+    <link rel="stylesheet" href="/2016/group20/css/custom.css">
+</head>
+    <body>
+        <nav class="navbar-fixed">
+    <nav class="light-blue darken-1">
+        <div class="nav-wrapper">
+            <div class="brand-logo left active waves-effect wave-light">
+                <a id="logo-container"
+                   href="/2016/group20/">Group
+                    20</a>
+            </div>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://github.com/orgs/ATOS-Time-Machine/" target="_blank"><img src="/2016/group20/img/github2.png"></a></li>
+                <li><a href="/2016/group20/planning">Planning</a></li>
+                <li><a href="/2016/group20/requirements">Requirements</a></li>
+                <li><a class="dropdown-button" data-activates="research_dropdown" data-beloworigin="true">Research<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <li><a href="/2016/group20/hci">HCI</a></li>
+                <li><a href="/2016/group20/design">Design</a></li>
+                <li><a href="/2016/group20/testing">Testing</a></li>
+                <!--<li><a class="dropdown-button" data-activates="eval_dropdown" data-beloworigin="true">Evaluation<i-->
+                        <!--class="material-icons right">arrow_drop_down</i></a></li>-->
+                <li><a href="/2016/group20/evaluation">Evaluation</a></li>
+                <li><a class="dropdown-button" data-activates="management_dropdown" data-beloworigin="true">Management<i
+                        class="material-icons right">arrow_drop_down</i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</nav>
+
+<ul id="management_dropdown" class="dropdown-content">
+    <li><a href="/2016/group20/management/api">API</a></li>
+    <li><a href="/2016/group20/management/system">System Manual</a></li>
+    <li><a href="/2016/group20/management/timeline">Timeline</a></li>
+</ul>
+
+<ul id="research_dropdown" class="dropdown-content">
+    <li><a href="/2016/group20/research/dev_methods">Development Methods</a></li>
+    <li><a href="/2016/group20/research/technical">Technical Report</a></li>
+    <li><a href="/2016/group20/research/investigation">Investigation</a></li>
+</ul>
+
+<ul id="eval_dropdown" class="dropdown-content">
+    <li><a href="/2016/group20/evaluation/achievements">Achievements</a></li>
+    <li><a href="/2016/group20/evaluation/critical">Critical Assessment</a></li>
+</ul>
+
+        <header>
+    <div class="light-blue lighten-1">
+        <br><br>
+
+        <h1 class="center white-text">Testing & Toolchain</h1>
+        <br><br>
+    </div>
+</header>
+<nav>
+    <div class="nav-wrapper">
+        <div class="container col">
+            <a href="/2016/group20/" class="breadcrumb">Home</a>
+            <a href="" class="breadcrumb">Testing & Toolchain</a>
+        </div>
+    </div>
+</nav>
+<!--<p>testing.html</p>-->
+<div class="container section">
+    <h3>Testing</h3>
+    <div class="divider"></div>
+    <p>
+        In order to make sure that our project adheres to the requirements elicited from our client, we will be putting
+        a great deal of focus on testing ensuring that it upheld throughout the development process. The following
+        details on this page explore the testing strategies that we will be employing.
+    </p>
+    <br>
+
+    <h4>Unit Testing</h4>
+    <p>
+        Unit testing is a method of testing which can be utilised to test individual components of the system. We will
+        be setting up these unit tests to operate automatically alongside our automatic deployment from github whenever
+        there is a push to the main branch, ensuring that this push did not cause any damage to the web application. In
+        order to conduct these unit tests automatically we plan to make use of several different unit testing
+        frameworks. For the PHP + MYSQL backend we plan on utlising PHPUnit which is a popular PHP unit testing
+        framework which produces HTML reports with code coverage. For our front-end we plan on using Unit.js which is a
+        unit testing framework for javascript which works with any other testing framework and assertion library which
+        will provide more flexibility for later in development.
+    </p>
+    <br>
+
+    <h4>Integration & Functional Testing</h4>
+    <p>
+        We will also using integration testing to make sure that all of the components within our system interconnect
+        and function appropriately. Functional testing will be carried out in order to make sure that the system adheres
+        to the functional requirements in order to produce a satisfactory web application for our clients. We have
+        decided to accomplish this by using Selenium which is a commonly used open-source testing framework tailored
+        towards testing web applications. This will allow us to send specific commands to the browser when our web
+        application is open such that we can test the result and make sure its behaviour is as expected.
+    </p>
+    <br>
+
+    <h4>User Acceptance Testing</h4>
+    <p>
+        Our main goal with this project is to ensure that we create a web application that our clients are clients are
+        content with. In order to this we will maintaining consistent communication with our clients. We plan to
+        incorporate user acceptance testing into our bi-weekly sprints as soon as we get the user interface to a stage
+        where it will be easy for our clients to use. We’ll make to have test scenarios so we can focus down the
+        features that they are testing and make sure they are aware of what we want them to accept.
+    </p>
+    <br>
+</div>
+
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="/2016/group20/js/prism.js"></script>
+<script src="/2016/group20/js/init.js"></script>
+        <!--<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Accolades</h5>
+                <ul>
+                    <li>
+                        <a class="white-text"
+                           href="https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/XLC/Downloads/SelectingDevelopmentApproach.pdf"
+                           target="_blank">CMS</a></li>
+                    <li><a class="white-text" href="https://nodejs.org/en/" target="_blank">NodeJS</a></li>
+                    <li><a class="white-text" href="https://www.djangoproject.com/" target="_blank">Django</a></li>
+                    <li>
+                        <a class="white-text"
+                           href="https://docs.microsoft.com/en-us/aspnet/core/#build-web-ui-and-web-apis-using-aspnet-core-mvc"
+                           target="_blank">Microsoft</a></li>
+                    <li><a class="white-text" href="https://uk.atos.net/en-uk/home.html" target="_blank">ATOS</a></li>
+                </ul>
+            </div>
+
+            <div class="col l3 s12">
+                <h5 class="white-text">Biweekly Reports</h5>
+                <ul>
+                    <li><a class="white-text"
+                           href="https://docs.google.com/document/d/1tx0pmLRZE4RZby07I-bL01cnztbZEeV7zFHNJzchCA0"
+                           target="_blank">12/10/2016</a></li>
+                    <li><a class="white-text"
+                           href="https://docs.google.com/document/d/1h0_8CRuApI9n4V0DEOgf-Uah8vBLOq2F20pLlwKWq3c"
+                           target="_blank">28/10/2016</a></li>
+                    <li><a class="white-text"
+                           href="https://docs.google.com/document/d/1I9c4WwxtuN11u64bdrsZ8m67RBRk1Ombr153coM1_Cc/"
+                           target="_blank">18/11/2016</a>
+                    </li>
+                    <li>
+                        <a class="white-text"
+                           href="https://docs.google.com/document/d/1py0Yt9w4F3AYteg14Z1dICWHzn09l1gYkJlkfAqa5lg"
+                           target="_blank">02/12/2016</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="https://github.com/JayJeyaruban" target="_blank">Jay
+            Jeyaruban</a>, <a class="brown-text text-lighten-3" href="https://github.com/TheRurry" target="_blank">Ryan
+            Collins</a>, <a class="brown-text text-lighten-3" href="https://github.com/giorgio-arena" target="_blank">Giorgio
+            Arena</a>
+        </div>
+    </div>
+</footer>-->
+    </body>
+</html>
