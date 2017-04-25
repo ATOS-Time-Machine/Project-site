@@ -8,114 +8,115 @@ title: Initial UI Design
         the design on what we saw in the user guide. We also made sure the designs that we were making were good
         examples of computer science and software engineering by making sure they were conforming to our requirements
         and the general HCI design principles.
-    </p>
-    <div class="card row">
-        <div class="card-content">
-            <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a class="active" href="#login">Login</a></li>
-                <li class="tab"><a href="#user">User Profile</a></li>
-                <li class="tab"><a href="#homepage">Homepage</a></li>
-                <li class="tab"><a href="#over_request">Overtime Request</a></li>
-                <li class="tab"><a href="#over_confirm">Overtime Confirmation</a></li>
-            </ul>
+</p>
+<div class="card row">
+    <div class="card-content">
+        <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a class="active" href="#login">Login</a></li>
+            <li class="tab"><a href="#user">User Profile</a></li>
+            <li class="tab"><a href="#homepage">Homepage</a></li>
+            <li class="tab"><a href="#over_request">Overtime Request</a></li>
+            <li class="tab"><a href="#over_confirm">Overtime Confirmation</a></li>
+        </ul>
 
+        <br>
+
+        <div id="login">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/login/login.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/login/signup.png">
+                    </li>
+                </ul>
+            </div>
             <br>
-
-            <div id="login">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/login/login.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/login/signup.png">
-                        </li>
-                    </ul>
-                </div>
-                <br>
-                <p>The login page will be where the user can utilize their ATOS credentials to access “Time Machine”.
-                    They will also be able to recover their accounts if for some reason they don’t their password or
-                    it's the first time user the system since an administrator added them to the system.</p>
-            </div>
-
-            <div id="user">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/profile/profile1.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/profile/profile2.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/profile/profile3.png">
-                        </li>
-                    </ul>
-                </div>
-                <br>
-                <p>The user profile page will be where users can view their profile details (+ profile details of those
-                    with a lower permission level) and change certain parts of it according to their role and assigned
-                    permissions that come with it, which can also be found in their profile.</p>
-            </div>
-
-            <div id="homepage">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/homepage/homepage.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/homepage/profile_icon.png">
-                        </li>
-                    </ul>
-                </div>
-                <br>
-                <p>The homepage will be where the users can find helpful information about how to navigate the website,
-                    and how to utilize its various features. There will tabs to make it intuitive for the users to find
-                    all of the information that they need.</p>
-            </div>
-
-            <div id="over_request">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request1.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request2.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request3.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request4.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request5.png">
-                        </li>
-                    </ul>
-                </div>
-                <br>
-                <p>The overtime request page will be where the users can access one of the main functionalities of this
-                    web application. On this page they will able to submit their in advance overtime request where they
-                    can clarify what there are going to be doing and why they need to do it in overtime.</p>
-            </div>
-
-            <div id="over_confirm">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/overtime\ confirmation/confirm1.png">
-                        </li>
-                        <li>
-                            <img src="{{ site.baseurl }}/img/wireframes/overtime\ confirmation/confirm2.png">
-                        </li>
-                    </ul>
-                </div>
-                <br>
-                <p>The overtime confirmation page will be where approved overtime requests will be returned to the user
-                    after the date the specified the overtime would be occurring, and they can clarify what actually
-                    happened during this time, and whether it took the expected time.
-                </p>
-            </div>
+            <p>The login page will be where the user can utilize their ATOS credentials to access “Time Machine”.
+                They will also be able to recover their accounts if for some reason they don’t their password or
+                it's the first time user the system since an administrator added them to the system.</p>
         </div>
+
+        <div id="user">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/profile/profile1.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/profile/profile2.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/profile/profile3.png">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <p>The user profile page will be where users can view their profile details (+ profile details of those
+                with a lower permission level) and change certain parts of it according to their role and assigned
+                permissions that come with it, which can also be found in their profile.</p>
+        </div>
+
+        <div id="homepage">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/homepage/homepage.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/homepage/profile_icon.png">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <p>The homepage will be where the users can find helpful information about how to navigate the website,
+                and how to utilize its various features. There will tabs to make it intuitive for the users to find
+                all of the information that they need.</p>
+        </div>
+
+        <div id="over_request">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request1.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request2.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request3.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request4.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/overtime\ request/request5.png">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <p>The overtime request page will be where the users can access one of the main functionalities of this
+                web application. On this page they will able to submit their in advance overtime request where they
+                can clarify what there are going to be doing and why they need to do it in overtime.</p>
+        </div>
+
+        <div id="over_confirm">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/overtime\ confirmation/confirm1.png">
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/img/wireframes/overtime\ confirmation/confirm2.png">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <p>The overtime confirmation page will be where approved overtime requests will be returned to the user
+                after the date the specified the overtime would be occurring, and they can clarify what actually
+                happened during this time, and whether it took the expected time.
+            </p>
+        </div>
+    </div>
+</div>
