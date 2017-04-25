@@ -1,3 +1,46 @@
 ---
-title: Bi-Weekly Reports
+title: Timeline
 ---
+<br>
+<section class="timeline">
+  <ul>
+    {% for event in site.data.timeline %}
+    <li>
+      {% if event.url %}
+      <a href="{{ event.url }}">
+        <div class="hoverable white-text">
+          
+          <time>{{ event.date }}</time>
+          <p>{{ event.info }}</p>
+           
+        </div>
+        </a>  
+      {% else %}
+        <div>
+          <time>{{ event.date }}</time>
+          <p>{{ event.info }}</p>
+        </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+     
+    <!-- more list items here -->
+  </ul>
+</section>
+
+<script type="text/javascript">
+var items = document.querySelectorAll(".timeline li");
+ 
+// code for the isElementInViewport function
+ 
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+</script>

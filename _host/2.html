@@ -15,7 +15,20 @@ tag: service
 
 <p>First we create the service file</p>
 <pre><code class="language-bash">
+[Unit]
+Description=ATOS Time Machine
 
+[Service]
+ExecStart=/var/www/backend/app.js
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/backend
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
+Alias=timemachine.service
 </code></pre>
 
 Then we enable the service:
