@@ -14,35 +14,13 @@ title: Testing & Toolchain
 
     <h4>Unit Testing</h4>
     <p>
-        Unit testing is a method of testing which can be utilised to test individual components of the system. We will
-        be setting up these unit tests to operate automatically alongside our automatic deployment from github whenever
-        there is a push to the main branch, ensuring that this push did not cause any damage to the web application. In
-        order to conduct these unit tests automatically we plan to make use of several different unit testing
-        frameworks. For the PHP + MYSQL backend we plan on utlising PHPUnit which is a popular PHP unit testing
-        framework which produces HTML reports with code coverage. For our front-end we plan on using Unit.js which is a
-        unit testing framework for javascript which works with any other testing framework and assertion library which
-        will provide more flexibility for later in development.
-    </p>
-    <br>
-
-    <h4>Integration & Functional Testing</h4>
-    <p>
-        We will also using integration testing to make sure that all of the components within our system interconnect
-        and function appropriately. Functional testing will be carried out in order to make sure that the system adheres
-        to the functional requirements in order to produce a satisfactory web application for our clients. We have
-        decided to accomplish this by using Selenium which is a commonly used open-source testing framework tailored
-        towards testing web applications. This will allow us to send specific commands to the browser when our web
-        application is open such that we can test the result and make sure its behaviour is as expected.
+        Our client wanted a method to make sure that if any changes are made to the backend API they could ensure that their functionality will be preserved if any changes are made. Our unit tests are written using a framework called mocha and they operate by creating an artificial connection to the database. This does mean that we don’t test for any faults with the database and the connection to it, but we do have the tests being automated when a commit is pushed to the testing branch. The tests were automated using travis CI and writing a script that automatically installs all the necessary packages and then runs all of the unit tests showing the result of this in the git commit log.
     </p>
     <br>
 
     <h4>User Acceptance Testing</h4>
     <p>
-        Our main goal with this project is to ensure that we create a web application that our clients are clients are
-        content with. In order to this we will maintaining consistent communication with our clients. We plan to
-        incorporate user acceptance testing into our bi-weekly sprints as soon as we get the user interface to a stage
-        where it will be easy for our clients to use. We’ll make to have test scenarios so we can focus down the
-        features that they are testing and make sure they are aware of what we want them to accept.
+        Following review, we feel the team met the initial requirements outlined for the Time Machine. The team had to work with the constraint the more specific details around the special claims form format requirements weren’t provided and that we were unable to provide the team access to ESS, which is essential to be able to develop a tool guaranteed to integrate with it. Having completed some pilot testing, we found the tool extremely easy to use. The request form layout was clear and logical and completion of the form could be done quickly. The Login screen looked nice and funky. It was easy to add users and the different roles were defined. The processing of an OT request and approval was tested successfully. We liked the link to user guidelines being available from each page (albeit they are still in development J).
     </p>
     <br>
 </div>

@@ -1,3 +1,17 @@
 ---
 title: System Architecture
 ---
+<h4> Frontend </h4>
+<p>
+    Our front end was designed using components from MaterializeCSS in order to recreate the front end of the current version of time machine but with improved aesthetics, and some minor changes to improve on the interface heuristics. Alongside this we used typescript compiled using webpack to handle all of the requests made to the backend and React JS to dynamically render javascript to the page when a request required as such.
+</p>
+
+<h4> Backend </h4>
+<p>
+    Our backend was programmed using nodejs alongside several packages the main of which was express. The use of these enabled to create a backend with an API, due to the routing capabilities of express. This was done to make integration with other ATOS software without making them have to try and access the database directly themselves. The functionality provided by the API give other programs the same functions as what the front end uses to interact with the database.
+</p>
+
+<h4> Server </h4>
+<p>
+    Our web server runs both the Apache server that our frontend is deployed on, and our backend nodejs server. We made sure that the server is easy to deploy with instructions being present on this site. Additionally we have made it so that commits that are pushed to production branch of our git repository automatically redeploy our front and backend due our our configuration of our servers as a service.
+</p>

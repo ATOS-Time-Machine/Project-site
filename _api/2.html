@@ -1,45 +1,55 @@
+--- 
+  title: Authentication 
 ---
-title: Generating a token (General User)
-tag: token
----
-<p>To generate a token you have to make use of the /login POST request which is written as follows:</p>
-<pre><code class="language-js">
-app.post("/login", function (req, res) {
-    console.log("Logging in");
-    var query = "SELECT Password FROM Users WHERE StaffID=?;";
-    connection.query(query, [req.body.log_id],function (error, results) {
-        if (error) {
-            throw error;
-        } else {
-            if (req.body.log_password === "111") {
-                res.json({
-                    success: (req.body.log_password === results[0].Password),
-                    token: req.body.log_id
-                });
-            } else {
-                console.log(results[0].Password);
-                res.json({
-                    success: bcrypt.compareSync(req.body.log_password, results[0].Password),
-                    token: req.body.log_id
-                });
-            }
-        }
-    });
-});
-</code>
+<p>
+    Authentication allows you to generate a token so that you can access the other functionalities the API has to offer. In order
+    to authenticate your credentials you can make a post request to /authenticate
+</p>
+
+<pre>
+    <code class="language-js">
+        Curl -d <payload goes here> http://atostimemachine.westus.cloudapp.azure.com/api/authenticate
+    </code>
 </pre>
-<p>A POST request to /login requires the following information in the described JSON:</p>
-<pre><code class="language-js">
-{
-    log_id: log_id,
-    log_password: log_password
-}
-</code></pre>
-<p>If the information provided is valid then the message returned will contain the following in the described JSON:</p>
-<pre><code class="language-js">
-{
-  success: <true/false>,
-  token: <token value>
-}
-</code></pre>
-<p>This token will be necessary to use any of the other functions listed, and depending on the credentials used to generate the token, some function may still be off limits.</p>
+
+<p>
+    Where the payload is constructed of the following fields put into JSON:
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Id</td>
+    <td>This is your normal staff id that you log into your ATOS account with.</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>This is the password which your supervisor assigned alongside your staff id when they made your account.</td>
+  </tr>
+</table>
+
+<p>
+    The response message from this will be constructed of the following:
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Success</td>
+    <td>This a boolean field which details wherever the post request was successful.</td>
+  </tr>
+  <tr>
+    <td>Token (Optional)</td>
+    <td>This is a string which contains the encoded id you authenticated with, and whether or not your credentials provide you with an admin status (this is only returned if the success is true).</td>
+  </tr>
+  <tr>
+    <td>Admin (Optional)</td>
+    <td>This a boolean field which indicated whether or not your credentials provide you with an admin status.</td>
+  </tr>
+</table>

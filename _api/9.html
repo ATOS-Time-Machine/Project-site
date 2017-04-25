@@ -1,0 +1,46 @@
+--- 
+  title: Adding a new WBS code for a user 
+---
+<p>
+    In order to add a new WBS code to be used in submitting an overtime request you can make a post request to /code
+</p>
+
+<pre>
+    <code class="language-js">
+        Curl -d <payload goes here> http://atostimemachine.westus.cloudapp.azure.com/api/code
+    </code>
+</pre>
+
+<p>
+    Where the payload is constructed of the following fields put into JSON:
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Token</td>
+    <td>This is the token field which is returned by the authentication route.</td>
+  </tr>
+  <tr>
+    <td>Code</td>
+    <td>This is an array containing all of the results relevant to the get request.</td>
+  </tr>
+</table>
+
+<p>
+    The response message from this will be constructed of the following:
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Success</td>
+    <td>This a boolean field which details wherever the post request was successful.</td>
+  </tr>
+</table>
