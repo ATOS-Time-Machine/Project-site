@@ -17,40 +17,56 @@
     Where the payload is constructed of the following fields put into JSON:
 </p>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>Id</td>
-    <td>This is your normal staff id that you log into your ATOS account with.</td>
-  </tr>
-  <tr>
-    <td>Password</td>
-    <td>This is the password which your supervisor assigned alongside your staff id when they made your account.</td>
-  </tr>
-</table>
+<div class="card">
+  <div class="card-content">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Id</td>
+          <td>This is your normal staff id that you log into your ATOS account with.</td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>This is the password which your supervisor assigned alongside your staff id when they made your account.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <p>
     The response message from this will be constructed of the following:
 </p>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>Success</td>
-    <td>This a boolean field which details wherever the post request was successful.</td>
-  </tr>
-  <tr>
-    <td>Token (Optional)</td>
-    <td>This is a string which contains the encoded id you authenticated with, and whether or not your credentials provide you with an admin status (this is only returned if the success is true).</td>
-  </tr>
-  <tr>
-    <td>Admin (Optional)</td>
-    <td>This a boolean field which indicated whether or not your credentials provide you with an admin status.</td>
-  </tr>
-</table>
+<div class="card">
+  <div class="card-content">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Success</td>
+          <td>This a boolean field which details wherever the post request was successful.</td>
+        </tr>
+        <tr>
+          <td>Token (Optional)</td>
+          <td>This is a string which contains the encoded id you authenticated with, and whether or not your credentials provide you with an admin status (this is only returned if the success is true).</td>
+        </tr>
+        <tr>
+          <td>Admin (Optional)</td>
+          <td>This a boolean field which indicated whether or not your credentials provide you with an admin status.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
